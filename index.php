@@ -8,23 +8,24 @@ function debug($data)
 }
 
 $car1 = new Car();
-$car2 = new Car();
-
 
 $car1->color = 'Black';
 $car1->brand = 'Honda';
 $car1->speed = 220;
 $car1->year = 2015;
 
+$car2 = new Car();
 $car2->color = 'White';
 $car2->brand = 'Tesla';
 $car2->speed = 250;
 $car2->year = 2020;
-//debug($car1);
-//debug($car2);
-echo "<h3>About auto:</h3>
-Brand: {$car1->brand}<br>
-Color: {$car1->color} <br>
-Speed: {$car1->speed} <br>
-Year: {$car1->year} <br>
-";
+
+$car3 = new Car();
+$car3->color = 'Red';
+$car3->brand = 'Audi';
+$car3->speed = 180;
+$car3->year = 2017;
+
+echo $car1  ->getCarInfo();
+echo $car2  ->getCarInfo();
+echo $car3  ->getCarInfo();
