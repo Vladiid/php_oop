@@ -1,7 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: admin
- * Date: 05.04.2020
- * Time: 16:28
- */
+
+require_once 'classes/FirstClass.php';
+
+$object = new FirstClass();
+var_dump($object);
