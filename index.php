@@ -7,24 +7,9 @@ function debug($data)
     echo '<pre>' . print_r($data, 1) . '</pre>';
 }
 
-$car1 = new Car();
-
-$car1->color = 'Black';
-$car1->brand = 'Honda';
-$car1->speed = 220;
-$car1->year = 2015;
-
-$car2 = new Car();
-$car2->color = 'White';
-$car2->brand = 'Tesla';
-$car2->speed = 250;
-$car2->year = 2020;
-
-$car3 = new Car();
-$car3->color = 'Red';
-$car3->brand = 'Audi';
-$car3->speed = 180;
-$car3->year = 2017;
+$car1 = new Car('Black', 220, 'Honda', 4, 2020);
+$car2 = new Car('White', 250, 'Tesla', 4, 2020);
+$car3 = new Car('Red', 180, 'Audi', 4, 2020);
 
 echo $car1  ->getCarInfo();
 echo $car2  ->getCarInfo();
