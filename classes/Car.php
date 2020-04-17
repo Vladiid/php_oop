@@ -6,16 +6,17 @@ class Car
     public $speed;
     public $brand;
     public $wheels;
-    public $year;
+    public $years;
 
-//    public function __construct($color, $speed, $brand, $wheels, $year)
-//    {
-//        $this -> color = $color;
-//        $this -> speed = $speed;
-//        $this -> brand = $brand;
-//        $this -> whels = $wheels;
-//        $this -> year = $year;
-//    }
+
+    public function __construct($color, $speed, $brand, $wheels, $year)
+    {
+        $this->color = $color;
+        $this->speed = $speed;
+        $this->brand = $brand;
+        $this->wheels = $wheels;
+        $this->year = $year;
+    }
 
     public function getCarInfo()
     {
