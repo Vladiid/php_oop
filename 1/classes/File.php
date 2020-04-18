@@ -37,12 +37,13 @@ class File
 
     public function __construct($fpath)
     {
-        $this->fpath = $fpath;
-        if (!is_writable($this->fpath)) {
-            echo "Файл $this->fpath недоступен для записи";
+        $this->fpath=$fpath;
+        if(!is_writable($this->fpath)){
+            echo "Файл {$this->fpath} недоступен для записи";
             exit;
         }
         $this->file_open = fopen($this->fpath, 'a');
+
     }
 
     public function __destruct()
@@ -52,10 +53,11 @@ class File
 
     public function write($text)
     {
-        if (fwrite($this->file_open, $text . PHP_EOL) == false) {
+        if(fwrite($this->file_open, $text.PHP_EOL)===false){
             echo "Не могу произвести запись в файл ($this->file_open)";
             exit;
         }
     }
+
 
 }
