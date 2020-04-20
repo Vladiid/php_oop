@@ -17,3 +17,4 @@ $file->write('line1');
 $file->write('line2');
 $file->write('line3');
 $file->write('line4');
+$file->read();
