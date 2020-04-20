@@ -32,32 +32,34 @@
 
 class File
 {
-    public $file_open;
-    public $fpath;
+    public $fp; //указатель на открытие фала
+    public $file; //путь к файлу
 
-    public function __construct($fpath)
+    public function __construct($file)
     {
-        $this->fpath=$fpath;
-        if(!is_writable($this->fpath)){
-            echo "Файл {$this->fpath} недоступен для записи";
+        $this->file = $file;
+        if(!is_writable($this->file)){
+            echo "Файл {$this->file} недоступен для записи";
             exit;
         }
-        $this->file_open = fopen($this->fpath, 'a');
+        $this->fp=fopen($this->file, "a");
 
     }
 
     public function __destruct()
     {
-        fclose($this->file_open);
+        fclose($this->fp);
+
     }
 
     public function write($text)
     {
-        if(fwrite($this->file_open, $text.PHP_EOL)===false){
-            echo "Не могу произвести запись в файл ($this->file_open)";
+        if (fwrite($this->fp, $text.PHP_EOL) === FALSE) {
+            echo "Не могу произвести запись в файл ($this->fp)";
             exit;
         }
-    }
 
+
+    }
 
 }
