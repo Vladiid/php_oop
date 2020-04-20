@@ -38,11 +38,11 @@ class File
     public function __construct($file)
     {
         $this->file = $file;
-        if(!is_writable($this->file)){
+        if (!is_writable($this->file)) {
             echo "Файл {$this->file} недоступен для записи";
             exit;
         }
-        $this->fp=fopen($this->file, "a");
+        $this->fp = fopen($this->file, "a");
 
     }
 
@@ -54,12 +54,21 @@ class File
 
     public function write($text)
     {
-        if (fwrite($this->fp, $text.PHP_EOL) === FALSE) {
+        if (fwrite($this->fp, $text . PHP_EOL) === FALSE) {
             echo "Не могу произвести запись в файл ($this->fp)";
             exit;
         }
 
 
+    }
+
+    public function read()
+    {
+        $input_txt = file("file.txt");
+        foreach ($input_txt as $value) {
+            $text = explode("-", $value);
+            echo $text[0]."<br>";
+        }
     }
 
 }
