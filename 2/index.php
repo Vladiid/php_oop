@@ -1,17 +1,18 @@
 <?php
 
-class Product
+require_once 'classes/Product.php';
+
+function debug($data)
 {
-    public $name;
-    public $price;
-
-
-    public $cpu;
-    public $numPages;
-
-    public function __construct($name, $price, $cpu = null, $numPages = null)
-    {
-
-    }
-
+    echo '<pre>' . print_r($data, 1) . '</pre>';
 }
+
+$book = new Product('Shine', 25, null, 370);
+
+$notebook = new Product('Macbook pro', 1799, 'Intel Core I9');
+
+//debug($book);
+//debug($notebook);
+
+echo $book->getProduct('book');
+echo $notebook->getProduct('notebook');
