@@ -30,7 +30,7 @@ class Car
 
     }
 
-    public function getCarInfo()
+    public  function getCarInfo()
     {
         return "<h3>About auto:</h3>
                 Brand: {$this->brand}<br>
