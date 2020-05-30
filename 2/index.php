@@ -9,9 +9,10 @@ function debug($data)
     echo '<pre>' . print_r($data, 1) . '</pre>';
 }
 
-$book = new BookProduct('Shine', 25, 477);
+$book = new BookProduct('Shine', 25, 20);
 
-$notebook = new NotebookProduct('Macbook pro', 1799, 'intel');
+$notebook = new NotebookProduct('Macbook pro', 100, 'intel');
+
 
 debug($book);
 debug($notebook);
