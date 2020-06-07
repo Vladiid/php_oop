@@ -11,7 +11,7 @@ class Product
     {
         $this->name = $name;
         $this->price = $price;
-        $this->setDiscount(10);
+        $this->setDiscount(15);
     }
 
     public function getProduct()
@@ -19,8 +19,8 @@ class Product
         return "<hr><b>About Product:</b><br>
                 Name: {$this->name}<br>
                 Discount: {$this->getDiscount()}%<br>
-                Old price: {$this->price}<br>
-                Discount price: {$this->getPrice()}<br>";
+                Old price: $"."{$this->price}<br>
+                Discount price: $"."{$this->getPrice()}<br>";
     }
 
     public function getName()
