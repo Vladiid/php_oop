@@ -2,16 +2,30 @@
 
 require_once 'classes/Product.php';
 require_once 'classes/NotebookProduct.php';
+require_once 'classes/IGadget.php';
 require_once 'classes/BookProduct.php';
+
 
 function debug($data)
 {
     echo '<pre>' . print_r($data, 1) . '</pre>';
 }
 
-$book = new BookProduct('Shine', 25, 20);
+function offerCase(IGadget $product){
+    echo "<p>Laptop bag as a gift for {$product->getName()}!</p>";
+}
 
+<<<<<<< HEAD
 $notebook = new NotebookProduct('Macbook pro', 3000, 'intel');
+=======
+var_dump($book instanceof IGadget);
+var_dump($notebook instanceof NotebookProduct);
 
-echo $book->getProduct();
-echo $notebook->getProduct();
+$book = new BookProduct('Shine', 25, 20);
+$notebook = new NotebookProduct('Macbook pro', 2900, 'intel');
+
+
+//offerCase($book);
+>>>>>>> a622d9f13d10592602331afe305dc56bc04ea11b
+
+//offerCase($notebook);
