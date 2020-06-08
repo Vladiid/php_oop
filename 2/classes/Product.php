@@ -16,17 +16,17 @@ class Product
 
     public function getProduct()
     {
+
         return "<hr><b>About Product:</b><br>
                 Name: {$this->name}<br>
                 Discount: {$this->getDiscount()}%<br>
-<<<<<<< HEAD
                 Old price: {$this->price}<br>
-                Discount price: $ "."{$this->getPrice()}<br>";
-=======
-                Old price: $"."{$this->price}<br>
-                Discount price: $"."{$this->getPrice()}<br>";
->>>>>>> a622d9f13d10592602331afe305dc56bc04ea11b
+                Discount price: $ " . "{$this->getPrice()}<br>
+                Old price: $" . "{$this->price}<br>
+                Discount price: $" . "{$this->getPrice()}<br>";
+
     }
+
 
     public function getName()
     {
