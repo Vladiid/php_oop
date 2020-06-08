@@ -11,11 +11,7 @@ function debug($data)
 
 $book = new BookProduct('Shine', 25, 20);
 
-$notebook = new NotebookProduct('Macbook pro', 100, 'intel');
-
-
-debug($book);
-debug($notebook);
+$notebook = new NotebookProduct('Macbook pro', 3000, 'intel');
 
 echo $book->getProduct();
 echo $notebook->getProduct();
