@@ -20,7 +20,7 @@ class Product
                 Name: {$this->name}<br>
                 Discount: {$this->getDiscount()}%<br>
                 Old price: {$this->price}<br>
-                Discount price: {$this->getPrice()}<br>";
+                Discount price: $ "."{$this->getPrice()}<br>";
     }
 
     public function getName()
