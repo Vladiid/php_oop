@@ -15,9 +15,8 @@ function offerCase(IGadget $product){
     echo "<p>Laptop bag as a gift for {$product->getName()}!</p>";
 }
 
-<<<<<<< HEAD
 $notebook = new NotebookProduct('Macbook pro', 3000, 'intel');
-=======
+
 var_dump($book instanceof IGadget);
 var_dump($notebook instanceof NotebookProduct);
 
@@ -26,6 +25,5 @@ $notebook = new NotebookProduct('Macbook pro', 2900, 'intel');
 
 
 //offerCase($book);
->>>>>>> a622d9f13d10592602331afe305dc56bc04ea11b
 
 //offerCase($notebook);
