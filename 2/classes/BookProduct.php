@@ -1,7 +1,7 @@
 <?php
 
 
-class BookProduct extends Product
+class BookProduct extends Product implements IGadget
 {
     public $pages;
 
@@ -9,6 +9,11 @@ class BookProduct extends Product
     {
         parent::__construct($name, $price);
         $this->pages = $pages;
+    }
+
+    public function getCase()
+    {
+        // TODO: Implement getCase() method.
     }
 
     public function getProduct()
