@@ -1,7 +1,7 @@
 <?php
 
 
-class NotebookProduct extends Product implements IGadget
+class NotebookProduct extends Product
 {
     public $cpu;
 
@@ -11,10 +11,7 @@ class NotebookProduct extends Product implements IGadget
         $this->cpu = $cpu;
     }
 
-    public function getCase()
-    {
-        // TODO: Implement getCase() method.
-    }
+
 
     public function getProduct()
     {
