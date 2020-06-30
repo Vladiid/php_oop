@@ -1,5 +1,7 @@
 <?php
 
+namespace classes;
+
 class Product
 {
     public $name;
@@ -47,5 +49,6 @@ class Product
     public function setDiscount($discount)
     {
         $this->discount = $discount;
+
     }
 }
