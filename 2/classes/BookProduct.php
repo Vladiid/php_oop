@@ -1,5 +1,6 @@
 <?php
 
+namespace classes;
 
 class BookProduct extends Product
 {
@@ -22,6 +23,7 @@ class BookProduct extends Product
     public function getPages()
     {
         return $this->pages;
+
     }
 
 
