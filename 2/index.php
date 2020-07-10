@@ -1,28 +1,21 @@
 <?php
 
-use classes\BookProduct;
-use classes\interfaces\IGadget;
-use classes\NotebookProduct;
+use app\{BookProduct,NotebookProduct};
+use wfm\interfaces\IGadget;
 
-function auto_loader1($class)
-{
-    $class = str_replace("\\", '/', $class);
-    $file = __DIR__ . "/{$class}.php";
-    if (file_exists($file)) {
-        require_once $file;
-    }
-}
+require_once __DIR__.'/vendor/autoload.php';
 
-//function auto_loader2($class){
-//    $file = __DIR__."/classes/interfaces/{$class}.php";
-//    if(file_exists($file)){
+
+//function auto_loader($class)
+//{
+//    $class = str_replace("\\", '/', $class);
+//    $file = __DIR__ . "/{$class}.php";
+//    if (file_exists($file)) {
 //        require_once $file;
 //    }
 //}
 
-spl_autoload_register('auto_loader1');
-//spl_autoload_register('auto_loader2');
-
+//spl_autoload_register('auto_loader');
 
 function debug($data)
 {
@@ -45,3 +38,6 @@ offerCase($notebook);
 
 echo $notebook->getProduct();
 echo $book->getProduct();
+
+$mail = new \PHPMailer\PHPMailer\PHPMailer();
+debug($mail);
