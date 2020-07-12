@@ -9,6 +9,7 @@ class Product
 
     private $discount = 0;
 
+
     public function __construct($name, $price)
     {
         $this->name = $name;
@@ -22,8 +23,6 @@ class Product
         return "<hr><b>About Product:</b><br>
                 Name: {$this->name}<br>
                 Discount: {$this->getDiscount()}%<br>
-                Old price: {$this->price}<br>
-                Discount price: $ " . "{$this->getPrice()}<br>
                 Old price: $" . "{$this->price}<br>
                 Discount price: $" . "{$this->getPrice()}<br>";
 
