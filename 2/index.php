@@ -40,4 +40,5 @@ echo $notebook->getProduct();
 echo $book->getProduct();
 
 $mail = new \PHPMailer\PHPMailer\PHPMailer();
-debug($mail);
+debug($notebook);
+debug($book);
