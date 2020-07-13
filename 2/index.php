@@ -34,11 +34,9 @@ $book = new BookProduct('Shine', 25, 20);
 $notebook = new NotebookProduct('Macbook pro', 2900, 'intel');
 
 
-offerCase($notebook);
+//offerCase($notebook);
 
-echo $notebook->getProduct();
+//echo $notebook->getProduct();
 echo $book->getProduct();
 
 $mail = new \PHPMailer\PHPMailer\PHPMailer();
-debug($notebook);
-debug($book);
