@@ -1,9 +1,9 @@
 <?php
 
-use app\{BookProduct,NotebookProduct};
+use app\{BookProduct, NotebookProduct};
 use wfm\interfaces\IGadget;
 
-require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 
 //function auto_loader($class)
