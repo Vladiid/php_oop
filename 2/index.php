@@ -1,9 +1,9 @@
 <?php
 
-use app\{BookProduct,NotebookProduct};
+use app\{BookProduct, NotebookProduct};
 use wfm\interfaces\IGadget;
 
-require_once __DIR__.'/vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 
 //function auto_loader($class)
@@ -27,16 +27,13 @@ function offerCase(IGadget $product)
     echo "<p>Laptop bag as a gift for {$product->getName()}!</p>";
 }
 
-$notebook = new NotebookProduct('Macbook pro', 3000, 'intel');
-
 
 $book = new BookProduct('Shine', 25, 20);
 $notebook = new NotebookProduct('Macbook pro', 2900, 'intel');
 
-
 //offerCase($notebook);
 
-//echo $notebook->getProduct();
+echo $notebook->getProduct();
 echo $book->getProduct();
 
 $mail = new \PHPMailer\PHPMailer\PHPMailer();
